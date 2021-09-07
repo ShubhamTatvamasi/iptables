@@ -2,7 +2,7 @@
 
 List the rules in a chain:
 ```bash
-sudo iptables -L
+sudo iptables -L -n -v --line-number
 ```
 > add `-n` flag for **numeric output of addresses and ports**
 

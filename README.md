@@ -17,6 +17,11 @@ restore rules:
 sudo iptables-restore < rules
 ```
 
+flush all rules:
+```bash
+sudo iptables -F
+```
+
 change input policy to DROP:
 ```bash
 sudo iptables --policy INPUT DROP

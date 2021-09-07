@@ -32,3 +32,7 @@ sudo iptables -A INPUT -i lo -j ACCEPT
 sudo iptables -A OUTPUT -o lo -j ACCEPT
 ```
 
+allow icmp trafic:
+```bash
+sudo iptables -I OUTPUT 1 --proto icmp -j ACCEPT
+```

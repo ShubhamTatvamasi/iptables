@@ -6,6 +6,12 @@ sudo iptables -L -n -v --line-number
 ```
 > add `-n` flag for **numeric output of addresses and ports**
 
+
+save rules:
+```bash
+sudo iptables-save > new-rules
+```
+
 restore rules:
 ```bash
 sudo iptables-restore < rules

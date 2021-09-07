@@ -26,3 +26,8 @@ sudo iptables -I INPUT 1 -s 192.168.0.54 -j DROP
 sudo iptables -A INPUT -s 192.168.0.54 -j DROP
 ```
 
+accept everything on localhost:
+```bash
+sudo iptables -A INPUT -i lo -j ACCEPT
+```
+

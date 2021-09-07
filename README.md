@@ -57,3 +57,9 @@ allow input and output from range 192.168.1.0/24 on port 3306:
 sudo iptables -A INPUT -p tcp -s 192.168.1.0/24 --dport 3306 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
 sudo iptables -A OUTPUT -p tcp --sport 3306 -m conntrack --ctstate ESTABLISHED -j ACCEPT
 ```
+
+enable http ports:
+```bash
+sudo iptables -A OUTPUT -p tcp -m multiport --dport 80,443,8080 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+```
+

@@ -96,3 +96,7 @@ add logs 5 logs per minute:
 sudo iptables -A INPUT -i enp1s0 -s 10.10.10.0/24 -m limit --limit 5/m --limit-burst 7 -j LOG --log-prefix "IP_SPOOF_A"
 ```
 
+drop icmp connection:
+```bash
+sudo iptables -A INPUT -p icmp --icmp-type echo-reply -j DROP
+```

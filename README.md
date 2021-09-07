@@ -36,3 +36,8 @@ allow icmp trafic:
 ```bash
 sudo iptables -I OUTPUT 1 --proto icmp -j ACCEPT
 ```
+
+delete rule number from chain INPUT:
+```bash
+sudo iptables -D INPUT 3
+```

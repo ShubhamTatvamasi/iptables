@@ -52,3 +52,7 @@ all new connections on port 80:
 sudo iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
 ```
 
+allow input from range 192.168.1.0/24 on port 3306:
+```bash
+sudo iptables -A INPUT -p tcp -s 192.168.1.0/24 --dport 3306 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+```

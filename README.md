@@ -20,6 +20,7 @@ sudo iptables-restore < rules
 flush all rules:
 ```bash
 sudo iptables -F
+sudo iptables -F INPUT
 ```
 
 change input policy to DROP:

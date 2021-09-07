@@ -80,3 +80,8 @@ sudo iptables -A OUTPUT -p tcp --dport 25 -j REJECT
 sudo iptables -A OUTPUT -p tcp --dport 25 -j DROP
 ```
 
+drop invalid state:
+```bash
+sudo iptables -A INPUT -m conntrack --ctstate INVALID -j DROP
+```
+

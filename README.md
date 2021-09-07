@@ -10,3 +10,8 @@ restore rules:
 sudo iptables-restore < rules
 ```
 
+change input policy to DROP:
+```bash
+sudo iptables --policy INPUT DROP
+```
+

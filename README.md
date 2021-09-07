@@ -110,3 +110,8 @@ limit connection:
 ```bash
 sudo iptables -A port-scanning -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 1/s --limit-burst 2 -j RETURN
 ```
+
+drop if more than 10 new connections are there in last 60 seconds:
+```bash
+sudo iptables -A INPUT -p tcp --dport ssh -m conntrack --ctstate NEW -m recent --update --seconds 60 --hitcount 10 -j DROP
+```

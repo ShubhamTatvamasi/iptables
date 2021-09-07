@@ -63,3 +63,9 @@ enable http ports:
 sudo iptables -A OUTPUT -p tcp -m multiport --dport 80,443,8080 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
 ```
 
+reject connection from port 22:
+```bash
+sudo iptables -A OUTPUT -p tcp --dport 25 -j REJECT
+sudo iptables -A OUTPUT -p tcp --dport 25 -j DROP
+```
+

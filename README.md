@@ -100,3 +100,8 @@ drop icmp connection:
 ```bash
 sudo iptables -A INPUT -p icmp --icmp-type echo-reply -j DROP
 ```
+
+add new chain:
+```bash
+sudo iptables -N port-scanning
+```

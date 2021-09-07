@@ -21,5 +21,8 @@ sudo iptables --policy OUTPUT ACCEPT
 drop connection from specfic IP:
 ```bash
 sudo iptables -I INPUT 1 -s 192.168.0.54 -j DROP
+
+# Append rules
+sudo iptables -A INPUT -s 192.168.0.54 -j DROP
 ```
 

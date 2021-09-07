@@ -105,3 +105,8 @@ add new chain:
 ```bash
 sudo iptables -N port-scanning
 ```
+
+limit connection:
+```bash
+sudo iptables -A port-scanning -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 1/s --limit-burst 2 -j RETURN
+```

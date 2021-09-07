@@ -4,6 +4,7 @@ List the rules in a chain:
 ```bash
 sudo iptables -L
 ```
+> add `-n` flag for **numeric output of addresses and ports**
 
 restore rules:
 ```bash

@@ -47,3 +47,8 @@ allow destination port 22:
 sudo iptables -A OUTPUT -p tcp --dport 22 -j ACCEPT
 ```
 
+all new connections on port 80:
+```bash
+sudo iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+```
+

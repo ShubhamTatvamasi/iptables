@@ -41,3 +41,9 @@ delete rule number 3 from chain INPUT:
 ```bash
 sudo iptables -D INPUT 3
 ```
+
+allow destination port 22:
+```bash
+sudo iptables -A OUTPUT -p tcp --dport 22 -j ACCEPT
+```
+

@@ -86,3 +86,7 @@ drop invalid state:
 sudo iptables -A INPUT -m conntrack --ctstate INVALID -j DROP
 ```
 
+log connection:
+```bash
+sudo iptables -A INPUT -i enp1s0 -s 10.0.0.0/8 -j LOG --log-prefix "IP SPOOF A:"
+```

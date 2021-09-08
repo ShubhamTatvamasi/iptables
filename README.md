@@ -21,6 +21,9 @@ flush all rules:
 ```bash
 sudo iptables -F
 sudo iptables -F INPUT
+
+# Delete user-defined chains
+sudo iptables -X
 ```
 
 change input policy to DROP:

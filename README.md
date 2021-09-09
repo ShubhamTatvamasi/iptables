@@ -17,7 +17,7 @@ restore rules:
 sudo iptables-restore < rules
 ```
 
-flush all rules:
+flush rules and remove chains:
 ```bash
 sudo iptables -F
 sudo iptables -F INPUT

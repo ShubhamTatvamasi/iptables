@@ -26,6 +26,14 @@ sudo iptables -F INPUT
 sudo iptables -X
 ```
 
+flush and delete used defined chain for filted and nat tables:
+```bash
+sudo iptables -t filter -F
+sudo iptables -t filter -X
+sudo iptables -t nat -F
+sudo iptables -t nat -X
+```
+
 change input policy to DROP:
 ```bash
 sudo iptables --policy INPUT DROP

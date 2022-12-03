@@ -1,10 +1,16 @@
 # Port Forwarding
 
-
 Check if port forwarding is enabled:
 ```bash
 sudo sysctl -a | grep -i eth0.forwarding
 ```
+
+Enable port forwarding:
+```bash
+sudo sysctl net.ipv4.conf.eth0.forwarding=1
+```
+
+---
 
 Get default interface device name:
 ```bash

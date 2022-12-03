@@ -48,6 +48,11 @@ Delete the rule `1` for IP tables:
 sudo iptables -t nat -D PREROUTING 1
 ```
 
+Save the iptables rules:
+```bash
+sudo iptables-save
+```
+
 ---
 
 
